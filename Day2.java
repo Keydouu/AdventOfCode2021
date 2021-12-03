@@ -39,7 +39,7 @@ public class Day2{
 	}
 }
 class Submarine{
-	int depth=0, horizontalPosition=0;
+	private int depth=0, horizontalPosition=0;
 	public void up(int amount){
 		this.depth-=amount;
 	}
