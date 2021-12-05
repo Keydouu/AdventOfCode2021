@@ -25,7 +25,6 @@ public class Day4{
 					newNumber=fileScanner.nextInt();
 					bT.get(numberOfTables).addToTable(newNumber,j);
 				}
-				System.out.println();
 				numberOfTables++;
 			}
 			fileScanner.close();
