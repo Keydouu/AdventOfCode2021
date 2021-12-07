@@ -16,9 +16,6 @@ public class Day2{
 					case "forward":
 						carUnderTheWater.forward(fileScanner.nextInt());
 						break;
-					case "backward":
-						carUnderTheWater.backward(fileScanner.nextInt());
-						break;
 					case "up":
 						carUnderTheWater.up(fileScanner.nextInt());
 						break;
@@ -39,18 +36,18 @@ public class Day2{
 	}
 }
 class Submarine{
-	private int depth=0, horizontalPosition=0;
+	private int depth=0, horizontalPosition=0,aim=0;
 	public void up(int amount){
-		this.depth-=amount;
+		//this.depth-=amount;
+		this.aim-=amount;
 	}
 	public void down(int amount){
-		this.depth+=amount;
+		//this.depth+=amount;
+		this.aim+=amount;
 	}
 	public void forward(int amount){
 		this.horizontalPosition+=amount;
-	}
-	public void backward(int amount){
-		this.horizontalPosition-=amount;
+		this.depth+=(amount*this.aim);
 	}
 	public int getDepth(){
 		return this.depth;
